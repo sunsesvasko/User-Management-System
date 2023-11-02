@@ -1,0 +1,16 @@
+header {
+    width: 100vw;
+    background-color: #08d6a3;
+}
+
+.nav {
+    width: 100vw;
+    display: flex;
+    padding: 1rem 0rem;
+    justify-content: center;
+}
+
+.nav h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}

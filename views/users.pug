@@ -4,4 +4,20 @@ block append head
     link(rel="stylesheet", href="/stylesheets/users.css")
 
 block content
-    h1 This is the users page
+    button#new--user New User
+    table#users--table 
+        tr#heads--row
+            th ID
+            th Name 
+            th @Email
+            th Gender 
+            th Status 
+            th Action
+        tr.user--row
+            td 1
+            td Ashok Talwar 
+            td ashok_talwar@hagenes.co
+            td Male 
+            td Active
+            td
+                i.fa-solid.fa-pen
