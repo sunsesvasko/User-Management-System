@@ -1,0 +1,117 @@
+/* Button */
+
+#go--back {
+    color: purple;
+    margin-right: 55rem;
+}
+
+/* Form Container */
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 10rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1 {
+    color: #726c6a;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container p {
+    opacity: 0.25;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* Form */
+
+.form {
+    gap: 0.3rem;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+#nameInput {
+    margin-bottom: 0.5rem;
+}
+
+.labels {
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.inputs {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 0.4rem 0.35rem;
+}
+
+.inputs::placeholder {
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.gender {
+    gap: 1rem;
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.male--container, .female--container {
+    display: flex;
+    align-items: center;
+}
+
+.male--container label, .female--container label {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 2rem;
+}
+
+.status {
+    gap: 1rem;
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.active--container, .inactive--container {
+    display: flex;
+    align-items: center;
+}
+
+.active--container label, .inactive--container label {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 2rem;
+}
+
+#save {
+    color: black;
+    border: none;
+    padding: 0.8rem 0rem;
+    margin-top: 0.5rem;
+    border-radius: 3px;
+    background-color: #17cd8f;
+}
+
+#save:hover {
+    cursor: pointer;
+}
+
+#save:active {
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.25);
+    transform: translateY(4px);
+}

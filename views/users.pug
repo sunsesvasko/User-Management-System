@@ -8,18 +8,18 @@ mixin userRow(id, name, email, gender, status)
         td.gender--td #{gender}
         td.status--td #{status}
         td.action--td
-            a#edit--btn(href='#')
+            a#edit--btn(href='/updateUser')
                 i.fa.fa-pencil.fa-lg
             a#delete--btn(href='#')
                 i.fa.fa-times.fa-lg
 
 block append head 
+    title #{title}
     link(rel="stylesheet", href="/stylesheets/users.css")
-    link(rel='stylesheet', href='/stylesheets/font-awesome/css/font-awesome.min.css')
 
 block content
     .container
-        a#new--user(href='#') New User
+        a#new--user(href='/newUser') New User
             i.fa.fa-user.fa-lg
         table#users--table 
             tr.heads--row

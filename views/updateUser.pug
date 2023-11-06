@@ -1,0 +1,36 @@
+extends base
+
+block append head
+    link(rel="stylesheet", href="/stylesheets/updateUser.css")
+    title #{title}
+
+block content
+    .container
+        a#go--back(href='/') 
+            i.fa.fa-angle-double-left  All Users
+        h1 Update User
+        p Use the below form to Update an account
+        form.form
+            label.labels(for="name") Name
+            input.inputs(type="text" name="name" id='nameInput' required placeholder="Mark Stone") 
+            label.labels(for="email") Email
+            input.inputs(type="email" name="email" required placeholder="example@gmail.com")
+            .gender
+                label.labels(for="gender") Gender
+                .male--container
+                    input(type="radio" name="gender" value="Male")
+                    label(for="gender") Male
+                .female--container
+                    input(type="radio" name="gender" value="Female")
+                    label(for="gender") Female
+            .status
+                label.labels(for="status") Status
+                .active--container
+                    input(type="radio" name="status" value="active")
+                    label(for="gender") Active
+                .inactive--container
+                    input(type="radio" name="status" value="inactive")
+                    label(for="gender") Inactive
+            button#save(type="submit") Save
+
+    
