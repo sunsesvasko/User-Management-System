@@ -1,3 +1,118 @@
-#deletSvg {
-    color: red;
+.container {
+    gap: 1rem;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#new--user {
+    color: purple;
+    width: 100px;
+    height: 30px;
+    border: none;
+    display: flex;
+    font-size: 14px;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    border-radius: 3px;
+    text-decoration: none;
+    justify-content: center;
+    background-color: white;
+}
+
+#new--user:hover {
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+#new--user:active {
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.25);
+    transform: translateY(4px);
+}
+
+.fa-user {
+    padding-left: 5px;
+}
+
+#users--table tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heads--row {
+    color: white;
+    width: 100%;
+    display: flex;
+    padding: 1rem 0rem;
+    text-align: center;
+    background-color: #2d2b45;
+}
+
+.heads--row th {
+    font-weight: bold;
+}
+
+.user--row {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+.user--row td {
+    display: flex;
+    padding: 0.5rem 0rem;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid lightgray;
+}
+
+#id--th, .id--td {
+    width: 50px;
+}
+
+#name--th, .name--td {
+    width: 200px;
+}
+
+#email--th, .email--td {
+    width: 300px;
+}
+
+#gender--th, .gender--td {
+    width: 75px;
+}
+
+#status--th, .status--td {
+    width: 100px;
+}
+
+#action--th, .action--td {
+    width: 150px;
+}
+
+.action--td {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#edit--btn, #delete--btn {
+    color: purple;
+    width: 50px;
+    height: auto;
+    padding: 5px 0px;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+#edit--btn:hover, #delete--btn:hover {
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+#edit--btn:active, #delete--btn:active {
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.25);
+    transform: translateY(4px);
 }

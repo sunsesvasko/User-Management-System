@@ -1,23 +1,33 @@
 extends base
 
+mixin userRow(id, name, email, gender, status)
+    tr.user--row
+        td.id--td #{id}
+        td.name--td #{name} 
+        td.email--td #{email}
+        td.gender--td #{gender}
+        td.status--td #{status}
+        td.action--td
+            a#edit--btn(href='#')
+                i.fa.fa-pencil.fa-lg
+            a#delete--btn(href='#')
+                i.fa.fa-times.fa-lg
+
 block append head 
     link(rel="stylesheet", href="/stylesheets/users.css")
+    link(rel='stylesheet', href='/stylesheets/font-awesome/css/font-awesome.min.css')
 
 block content
-    button#new--user New User
-    table#users--table 
-        tr#heads--row
-            th ID
-            th Name 
-            th @Email
-            th Gender 
-            th Status 
-            th Action
-        tr.user--row
-            td 1
-            td Ashok Talwar 
-            td ashok_talwar@hagenes.co
-            td Male 
-            td Active
-            td
-                i.fa-solid.fa-pen
+    .container
+        a#new--user(href='#') New User
+            i.fa.fa-user.fa-lg
+        table#users--table 
+            tr.heads--row
+                th#id--th ID
+                th#name--th Name 
+                th#email--th @Email
+                th#gender--th Gender 
+                th#status--th Status 
+                th#action--th Action
+            +userRow(1, 'Ashok Talwar', 'ashok_talwar@hagenes.co', 'Male', 'Active')
+            +userRow(2, 'Trunk Koshmarov', 'trunkk@gmail.com', 'Male', 'Inactive')
