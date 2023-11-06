@@ -4,7 +4,7 @@
   "description": "A User Management System with CRUD operations",
   "main": "./public/js/bundle.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "supervisor server.js",
     "watch:js": "parcel watch ./public/js/index.js --dist-dir ./public/js --public-url .",
     "build:js": "parcel build ./public/js/index.js --dist-dir ./public/js --public-url ."
   },

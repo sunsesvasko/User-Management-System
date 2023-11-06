@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 
 const viewRoutes = require('./routes/viewRoutes');
 const userRoutes = require('./routes/userRoutes');
+const globalErrorHandler = require('./controllers/errorController');
 
 const app = express(); 
 
@@ -28,5 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', viewRoutes); 
 app.use('/api/users', userRoutes);
+
+app.use(globalErrorHandler);
 
 module.exports = app;
