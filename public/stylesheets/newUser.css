@@ -33,7 +33,7 @@
 
 /* Form */
 
-.form {
+.form--user {
     gap: 0.3rem;
     width: 750px;
     display: flex;

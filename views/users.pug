@@ -29,5 +29,5 @@ block content
                 th#gender--th Gender 
                 th#status--th Status 
                 th#action--th Action
-            +userRow(1, 'Ashok Talwar', 'ashok_talwar@hagenes.co', 'Male', 'Active')
-            +userRow(2, 'Trunk Koshmarov', 'trunkk@gmail.com', 'Male', 'Inactive')
+            each user, index in users
+                +userRow(index + 1, user.name, user.email, user.gender, user.status)

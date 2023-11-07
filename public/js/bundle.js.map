@@ -1,1 +1,1 @@
-{"mappings":"","sources":["public/js/index.js"],"sourcesContent":[null],"names":[],"version":3,"file":"bundle.js.map","sourceRoot":"../../"}
+{"mappings":"AAGA,MAAM,oCAAc,SAAS,aAAa,CAAC;AAExC","sources":["public/js/index.js"],"sourcesContent":["\r\n\r\n\r\nconst newUserForm = document.querySelector('.form--user');\r\n\r\nif(newUserForm);"],"names":[],"version":3,"file":"bundle.js.map","sourceRoot":"../../"}
