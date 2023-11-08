@@ -8,8 +8,8 @@ mixin userRow(id, _id, name, email, gender, status)
         td.gender--td #{gender}
         td.status--td #{status}
         td.action--td
-            a#edit--btn(href='/updateUser' data-id=_id)
-                i.fa.fa-pencil.fa-lg(data-id=_id)
+            a#edit--btn(href=`/updateUser/?userId=${_id}`)
+                i.fa.fa-pencil.fa-lg()
             a#delete--btn(href='#' data-id=_id)
                 i.fa.fa-times.fa-lg(data-id=_id)
 

@@ -10,26 +10,26 @@ block content
             i.fa.fa-angle-double-left  All Users
         h1 Update User
         p Use the below form to Update an account
-        form.form
+        form.form--edit
             label.labels(for="name") Name
-            input.inputs(type="text" name="name" id='nameInput' required placeholder="Mark Stone") 
+            input.inputs(type="text" name="name" id='name' placeholder="Mark Stone") 
             label.labels(for="email") Email
-            input.inputs(type="email" name="email" required placeholder="example@gmail.com")
+            input.inputs(type="email" name="email" id='email' placeholder="example@gmail.com")
             .gender
                 label.labels(for="gender") Gender
                 .male--container
-                    input(type="radio" name="gender" value="Male")
+                    input.genderCb(type="radio" name="gender" value="Male")
                     label(for="gender") Male
                 .female--container
-                    input(type="radio" name="gender" value="Female")
+                    input.genderCb(type="radio" name="gender" value="Female")
                     label(for="gender") Female
             .status
                 label.labels(for="status") Status
                 .active--container
-                    input(type="radio" name="status" value="active")
+                    input.statusCb(type="radio" name="status" value="Active")
                     label(for="gender") Active
                 .inactive--container
-                    input(type="radio" name="status" value="inactive")
+                    input.statusCb(type="radio" name="status" value="Inactive")
                     label(for="gender") Inactive
             button#save(type="submit") Save
 

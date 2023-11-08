@@ -33,14 +33,14 @@
 
 /* Form */
 
-.form {
+.form--edit {
     gap: 0.3rem;
     width: 750px;
     display: flex;
     flex-direction: column;
 }
 
-#nameInput {
+#name {
     margin-bottom: 0.5rem;
 }
 
