@@ -5613,18 +5613,12 @@ if (newUserForm) {
 var getValues = function getValues(obj) {
   var name = document.querySelector('#name').value;
   var email = document.querySelector('#email').value;
-  var gender = document.querySelector('.genderCb').checked;
-  var status = document.querySelector('.statusCb').checked;
+  var gender = document.querySelector('input[name="gender"]:checked').value;
+  var status = document.querySelector('input[name="status"]:checked').value;
   if (name) obj.name = name;
   if (email) obj.email = email;
-  if (gender) {
-    obj.gender = document.querySelector('.genderCb:checked').value;
-    console.log(document.querySelector('.genderCb:checked').value);
-  }
-  if (status) {
-    obj.status = document.querySelector('.statusCb:checked').value;
-    console.log(document.querySelector('.statusCb:checked').value);
-  }
+  if (gender) obj.gender = document.querySelector('input[name="gender"]:checked').value;
+  if (status) obj.status = document.querySelector('input[name="status"]:checked').value;
   return obj;
 };
 if (editUserForm) {
@@ -5635,8 +5629,6 @@ if (editUserForm) {
     var userId = urlParams.get('userId');
     var dataObj = {};
     getValues(dataObj);
-    console.log(dataObj.gender);
-    console.log(dataObj.status);
     (0, _editUser.editUser)(userId, dataObj);
   });
 }
@@ -5666,7 +5658,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50679" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52282" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -35,19 +35,13 @@ if(newUserForm) {
 const getValues = (obj) => {
     const name = document.querySelector('#name').value;
     const email = document.querySelector('#email').value;
-    const gender = document.querySelector('.genderCb').checked;
-    const status = document.querySelector('.statusCb').checked;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    const status = document.querySelector('input[name="status"]:checked').value;
 
     if(name) obj.name = name;
     if(email) obj.email = email;
-    if(gender) {
-        obj.gender = document.querySelector('.genderCb:checked').value;
-        console.log(document.querySelector('.genderCb:checked').value);
-    }
-    if(status) {
-        obj.status = document.querySelector('.statusCb:checked').value;
-        console.log(document.querySelector('.statusCb:checked').value);
-    }
+    if(gender) obj.gender = document.querySelector('input[name="gender"]:checked').value;
+    if(status) obj.status = document.querySelector('input[name="status"]:checked').value;
 
     return obj;
 }
@@ -61,9 +55,6 @@ if(editUserForm) {
 
         let dataObj = {};
         getValues(dataObj);
-        console.log(dataObj.gender);
-        console.log(dataObj.status);
-
         editUser(userId, dataObj);
     });
 };
