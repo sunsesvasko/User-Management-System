@@ -2,11 +2,11 @@
   "name": "user-management-system",
   "version": "1.0.0",
   "description": "A User Management System with CRUD operations",
-  "main": "./public/js/bundle.js",
+  "main": "server.js",
   "scripts": {
     "start": "supervisor server.js",
-    "watch:js": "parcel watch ./public/js/index.js --dist-dir ./public/js --public-url .",
-    "build:js": "parcel build ./public/js/index.js --dist-dir ./public/js --public-url ."
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url ."
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "validator": "^13.11.0"
   },
   "devDependencies": {
-    "parcel": "^2.10.2"
+    "buffer": "^6.0.3",
+    "parcel-bundler": "^1.12.5"
   }
 }

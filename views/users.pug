@@ -1,7 +1,7 @@
 extends base
 
 mixin userRow(id, name, email, gender, status)
-    tr.user--row(data-userId=id)
+    tr.user--row(data-email=email)
         td.id--td #{id}
         td.name--td #{name} 
         td.email--td #{email}
