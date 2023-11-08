@@ -1,17 +1,17 @@
 extends base
 
-mixin userRow(id, name, email, gender, status)
-    tr.user--row(data-email=email)
+mixin userRow(id, _id, name, email, gender, status)
+    tr.user--row()
         td.id--td #{id}
         td.name--td #{name} 
         td.email--td #{email}
         td.gender--td #{gender}
         td.status--td #{status}
         td.action--td
-            a#edit--btn(href='/updateUser')
-                i.fa.fa-pencil.fa-lg
-            a#delete--btn(href='#')
-                i.fa.fa-times.fa-lg
+            a#edit--btn(href='/updateUser' data-id=_id)
+                i.fa.fa-pencil.fa-lg(data-id=_id)
+            a#delete--btn(href='#' data-id=_id)
+                i.fa.fa-times.fa-lg(data-id=_id)
 
 block append head 
     title #{title}
@@ -30,4 +30,4 @@ block content
                 th#status--th Status 
                 th#action--th Action
             each user, index in users
-                +userRow(index + 1, user.name, user.email, user.gender, user.status)
+                +userRow(index + 1, user._id, user.name, user.email, user.gender, user.status)
